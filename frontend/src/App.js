@@ -33,7 +33,6 @@ function App() {
   const handleDeleteImage = (id) => {
     setImages(images.filter((image) => image.id !== id));
   };
-
   return (
     <div className="App">
       <Header title="Images Gallery" />
@@ -51,5 +50,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
