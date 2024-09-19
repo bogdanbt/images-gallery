@@ -2,7 +2,7 @@ import os
 import requests 
 from flask import Flask,request
 from dotenv import load_dotenv
-
+from flask_cors import  CORS
 load_dotenv(dotenv_path="./.env.local")
 
 UNSPLASH_URL='https://api.unsplash.com/photos/random'
@@ -13,6 +13,8 @@ if not UNSPLASH_KEY:
     raise EnvironmentError("create .env.local")
 
 app = Flask(__name__)
+CORS(app)
+
 
 app.config["DEBUG"]=DEBUG
 
